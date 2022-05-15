@@ -64,14 +64,6 @@ function generatePassword() {
  
 }
 
-// 'Batman' => 'aBmnta'
-  // function shuffleWord (passwordLength) {
-  //   var shuffledWord = '';
-  //   passwordLength = realPassword.split('');
-  //   while (passwordLength.length > 0) {
-  //     shuffledWord +=  passwordLength.splice(passwordLength.length * Math.random() << 0, 1);
-  //   }
-  //   return shuffleWord; 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
