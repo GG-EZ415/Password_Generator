@@ -35,9 +35,10 @@ var symbols1 = "!@#$%^&*()";
 function generatePassword() {
   alert("The password can have\nUppercase letters\nLowercase Letters\nNumbers 0-9\nSpecial Characters such as !@#$%^&*()");
   // console.log("else works");
-  var passwordLength = prompt("the password must be between 8-125 characters long");
-  if ("" == null) {
+  var passwordLength = parseInt(prompt("How long do you want your password to be. The password must be between 8-128 characters long"));
+  if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
     alert("your password didnt quite meet the criteria asked, please try again");
+    return "";
   } else {
   var uppercase = confirm("would you like capital letters?");
   var lowercase = confirm("would you like lowercase letters?");
@@ -60,7 +61,19 @@ function generatePassword() {
     if (symbols == true) {
       chars += symbols1;
     }
-    return passwordLength + chars; 
+    if (chars === "") {
+      alert("your password didnt quite meet the criteria asked, please try again");
+      return "";
+    }
+
+    var psw = "";
+      for (var i = 0; i < passwordLength; i++) {
+        psw += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+// psw += etc
+// psw = psw + etc
+
+    return psw; 
  
 }
 
