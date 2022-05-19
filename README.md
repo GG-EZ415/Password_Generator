@@ -1,6 +1,6 @@
 # Password_Generator
 This was a project to generate a strong password using 
-* uppercase, 
+* uppercase,  
 * lowercase, 
 * numerals, 
 * and symbols.
